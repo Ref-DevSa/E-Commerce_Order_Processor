@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>E-Commerce Order Processor</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-slate-100 text-slate-800">
+  <header class="bg-indigo-700 px-6 py-8 text-white">
+    <h1 class="text-3xl font-bold">
+      E-Commerce Order Processor
+    </h1>
+    <p class="mt-2">
+      Manage, search and analyse customer orders.
+    </p>
+  </header>
+
+  <main class="mx-auto max-w-7xl space-y-8 p-6">
+
+    <section class="rounded-xl bg-white p-6 shadow">
+      <h2 class="mb-4 text-xl font-bold">Search / Filter</h2>
+      <!-- Search controls will go here -->
+    </section>
+
+    <section class="rounded-xl bg-white p-6 shadow">
+      <h2 class="mb-4 text-xl font-bold">Statistics</h2>
+      <div id="stats-grid" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+
+    <section class="rounded-xl bg-white p-6 shadow">
+      <h2 class="mb-4 text-xl font-bold">Categories</h2>
+      <div id="category-list" class="flex flex-wrap gap-2"></div>
+    </section>
+
+    <section class="rounded-xl bg-white p-6 shadow">
+      <h2 class="mb-4 text-xl font-bold">Product Lookup</h2>
+      <!-- Product lookup controls will go here -->
+    </section>
+
+    <section class="rounded-xl bg-white p-6 shadow">
+      <h2 class="mb-4 text-xl font-bold">Data Processing</h2>
+      <!-- JSON and validation controls will go here -->
+    </section>
+
+    <section class="rounded-xl bg-white p-6 shadow">
+      <h2 class="mb-4 text-xl font-bold">Orders</h2>
+
+      <p id="orders-count" class="mb-4 text-sm text-slate-500"></p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-slate-100">
+            <tr>
+              <th class="p-3">Order ID</th>
+              <th class="p-3">Customer</th>
+              <th class="p-3">Email</th>
+              <th class="p-3">Product</th>
+              <th class="p-3">Category</th>
+              <th class="p-3">Price</th>
+              <th class="p-3">Date</th>
+            </tr>
+          </thead>
+          <tbody id="orders-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
